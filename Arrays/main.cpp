@@ -8,24 +8,35 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	const int SIZE = 5;
-	int arr[SIZE] = { 3, 5, 8 };
-	//arr[2] = 2048;          Обращение к элементу массива на запись.
-	//cout << arr[2] << endl; Обращеие к элементу массива на чтение.
+	int arr[SIZE] = { 3,5,8 };
 
-	//Ввод элементов массива с клавиатуры:
 	for (int i = 0; i < SIZE; i++)
 	{
-		cout << ()
+	 cin >> arr[i];
 	}
-	cout << endl;
 
-
-	//Вывод элементов массива на экран:
-	/*for (int i = 0; i < SIZE; i++)
+	for (int i = 0; i < SIZE; i++)
 	{
 		cout << arr[i] << "\t";
 	}
-	cout << endl;*/
+	cout << endl;
 
+	for (int i = SIZE -1  ; i >= 0; i--)
+	{
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
 
+	for (int i = SIZE + 2; i <= 0; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+	int sum = 0;
+	for (int i = 0; i < SIZE; i++)
+	{
+		sum += arr[i];
+	}
+	cout << sum << endl;
+	cout << (double)sum/SIZE << endl;
 }

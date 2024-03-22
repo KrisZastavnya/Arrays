@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+
+
+void main()
+{
+	setlocale(LC_ALL, "");
+	//int sum = 0;
+	const int SIZE = 5;
+	int arr[SIZE] = { 3, 5, 8 };
+
+	//Ввод элементов массива с клавиатуры:
+	cout << "Введите элементы массива: ";
+	for (int i = 0; i < SIZE; i++)
+	{
+		cin >> arr[i];
+	}
+	//Вывод элементов массива на экран:
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+
+	//Ввод массива на экран в обратном порядке (от последнего элемента к первому):
+
+	for (int i = SIZE - 1; i >= 0; i--)
+	{
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+
+	//Сумма элементов массива
+	int sum = 0;
+	for (int i = 0; i < SIZE; i++)
+	{
+		sum += arr[i];
+	}
+	cout << "Сумма элементов массива: " << sum << endl;
+	cout << "Среднее-арифметическое элементов массива: " << (double) sum / SIZE << endl;
+
+	//Поиск минимального и максимального значения:
+	int min, max;
+	min = max = arr[0];
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (arr[i] < min) min = arr[i];
+		if (arr[i] > max) max = arr[i];
+	}
+	cout << "Минимальное значение в массиве: " << min << endl;
+	cout << "Максимальное значение в массиве: " << max << endl;
+	  
+	
+
+	
+}
