@@ -10,7 +10,7 @@ void main()
 	const int n = 32;
 	bool bin[n] = {};  //Ётот массив будет хранить разр€ды двоичного числа
 #ifdef VAR_1
-    int i = 0;
+	int i = 0;
 	while (decimal > 0)
 	{
 		bin[i] = decimal % 2;    //ѕолучаем младший разр€д числа
@@ -19,14 +19,15 @@ void main()
 	}
 #endif // VAR_1
 	int i = 0;
-	for (; decimal; bin[i++] = decimal % 2, decimal /= 2);
+	//for(start;stop;step);
+	//for (; decimal; bin[i++] = decimal % 2, decimal /= 2);
+	for (; decimal; bin[i++] = (decimal & 1), decimal >>= 1);
 
 	for (--i; i >= 0; i--)
 	{
-		cout << bin[i]; 
-		if ((i & 7) == 0)cout << " ";
-		if ((i & 3) == 0)cout << " ";
+		cout << bin[i];
+		if (i % 8 == 0) cout << " ";
+		if (i % 4 == 0) cout << " ";
 	}
 	cout << endl;
-
 }
